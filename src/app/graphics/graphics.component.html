@@ -1,0 +1,25 @@
+<h3>Graphic Design Portfolio</h3>
+<div class="w3-container">
+
+	<div *ngFor="let image of _albums; index as i">
+
+		<div class="w3-card">
+			<img [src]="image.src"  width="275"  (click)="open(i)" />
+			<div class="w3-container">
+				<h5>{{ image.caption }}</h5>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!--
+<div *ngFor="let item of portfolioItems | async">
+  <h1>{{ item.name }}</h1>
+
+  <img src="{{ item.artwork }}" 
+  alt="{{ item.name }}" height="357">
+
+</div>
+-->
+<!--https://stackblitz.com/edit/angular-wnpevq?file=src%2Fassets%2Fgraphic.json-->
